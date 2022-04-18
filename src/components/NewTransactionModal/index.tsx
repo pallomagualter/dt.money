@@ -8,13 +8,28 @@ interface NewTransactionModalProps {
 
 export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionModalProps) {
   return (
-    <Container>
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={onRequestClose}
-      >
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+    >
+      <Container>
         <h2>Cadastrar transação</h2>
-      </Modal>
-    </Container>
+
+        <input
+          placeholder='Título'
+        />
+
+        <input
+          type='number'
+          placeholder='Valor'
+        />
+
+        <input
+          placeholder='Categoria'
+        />
+
+        <button type='submit'>Cadastrar</button>
+      </Container>
+    </Modal>
   );
 }
